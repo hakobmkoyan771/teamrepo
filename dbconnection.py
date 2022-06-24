@@ -1,8 +1,10 @@
 #!/usr/bin/python3
+import os
 import pymongo
-import json
 
-client = pymongo.MongoClient('mongodb://127.0.0.1:27017')
+clientIP = os.system('echo $CLIENT_IP_ADDRESS')
+
+client = pymongo.MongoClient(str(clientIP))
 database = client['project']
 user_collection = database['users']
 

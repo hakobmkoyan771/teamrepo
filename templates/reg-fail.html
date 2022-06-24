@@ -52,6 +52,21 @@
       opacity: 1;
     }
 
+    .mainbtn {
+      background-color: #04AA6D;
+      color: white;
+      padding: 16px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+    }
+
+    .mainbtn:hover {
+      opacity: 1;
+    }
+
     /* Add a blue text color to links */
     a {
       color: dodgerblue;
@@ -66,21 +81,22 @@
 </head>
 
 <body>
-  <form action="{{url_for("registration")}}" method="post">
+  <form action="{{url_for(" registration")}}" method="post">
     <div class="container">
       <h1>Register</h1>
-      <p color="red">Email already in use.</p>
+      <p>Email already in use, change email.</p>
       <hr>
 
       <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email" name="email" id="email" required>
+      <input type="text" placeholder="Enter Email" name="email" id="email">
 
       <label for="name"><b>Name</b></label>
-      <input type="text" placeholder="Name" name="name" id="name" required>
+      <input type="text" placeholder="Name" name="name" id="name">
 
       <label for="surname"><b>Surname</b></label>
-      <input type="text" placeholder="Surname" name="surname" id="surname" required>
+      <input type="text" placeholder="Surname" name="surname" id="surname">
       <hr>
+      <button type="submit" class="mainbtn" name="main">Main Page</button>
       <button type="submit" class="registerbtn">Register</button>
     </div>
   </form>
